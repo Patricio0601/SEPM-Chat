@@ -13,6 +13,9 @@ import pytesseract     # Adicionado para OCR
 from unidecode import unidecode
 from threading import Lock  # Adicionado para sincronização
 from threading import Lock  # Adicionado para sincronização
+directory = "app_DF"
+if not os.path.exists(directory):
+    os.makedirs(directory)
 
 app = Flask(__name__)
 
