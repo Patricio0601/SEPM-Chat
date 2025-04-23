@@ -1,0 +1,156 @@
+/* Reset básico para consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização geral do corpo */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilização do cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #1a3c6e; /* Azul escuro institucional */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Estilização do container principal */
+.container {
+    max-width: 700px;
+    margin: 0 auto; /* Centraliza o formulário na página */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização da seção de chat */
+#chat-box {
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.message strong {
+    color: #1a3c6e;
+    font-weight: 600;
+}
+
+.message span {
+    display: block;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Estilização dos títulos das seções */
+h3 {
+    font-size: 18px;
+    color: #1a3c6e;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1a3c6e;
+    padding-bottom: 5px;
+}
+
+/* Estilização dos campos do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #1a3c6e;
+    box-shadow: 0 0 8px rgba(26, 60, 110, 0.2);
+}
+
+/* Estilização do botão */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #1a3c6e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #15325a;
+}
+
+/* Estilização para responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

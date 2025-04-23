@@ -1,0 +1,12 @@
+sepm_chat/
+├── app.py
+├── templates/
+│   └── index.html
+├── static/
+│   ├── style.css
+│   └── pmerj_logo.png  # Brasão público
+├── legislation/
+│   └── sepm_publications/  # Pasta para publicações
+├── credentials.json
+├── token.json
+└── requirements.txt

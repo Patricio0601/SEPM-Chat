@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEPM Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Brasão e Título Centralizados -->
+    <header class="header">
+        <img src="{{ url_for('static', filename='pmerj_logo.png') }}" alt="Brasão da PMERJ" onerror="console.log('Erro ao carregar a imagem: /static/pmerj_logo.png');">
+        <h1>SEPM Chat</h1>
+    </header>
+
+    <!-- Formulário e Chat -->
+    <main class="container">
+        <section id="chat-box">
+            {% if chat_history %}
+                {% for message in chat_history %}
+                    <div class="message">
+                        <strong>{{ message.role }}:</strong>
+                        <span>{{ message.content }}</span>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="message">
+                    <span>Nenhuma mensagem no histórico.</span>
+                </div>
+            {% endif %}
+        </section>
+        <form method="POST" action="/chat">
+            <!-- Seção para Identificação do Usuário -->
+            <h3>Identificação do Usuário</h3>
+            <div class="form-group">
+                <label for="unidade">Unidade (ex.: 17 BPM)</label>
+                <input type="text" name="unidade" id="unidade" placeholder="Digite a unidade" required>
+            </div>
+            <div class="form-group">
+                <label for="posto_graduacao">Posto/Graduação (ex.: MAJ)</label>
+                <input type="text" name="posto_graduacao" id="posto_graduacao" placeholder="Digite o posto ou graduação" required>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome (ex.: PATRICIO)</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome" required>
+            </div>
+            <div class="form-group">
+                <label for="rg">RG (ex.: 81100)</label>
+                <input type="text" name="rg" id="rg" placeholder="Digite o RG" required>
+            </div>
+
+            <!-- Seção para Detalhes da Pesquisa -->
+            <h3>Detalhes da Pesquisa</h3>
+            <div class="form-group">
+                <label for="item">Item (ex.: elétrica)</label>
+                <input type="text" name="item" id="item" placeholder="Digite o item a ser pesquisado" required>
+            </div>
+            <div class="form-group">
+                <label for="valor_total">Valor Total (ex.: R$ 500,00)</label>
+                <input type="text" name="valor_total" id="valor_total" placeholder="Digite o valor total" required>
+            </div>
+
+            <!-- Campo para a Mensagem -->
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <input type="text" name="mensagem" id="mensagem" placeholder="Digite sua mensagem..." required>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <script>
+        // Rolar automaticamente para a última mensagem
+        const chatBox = document.getElementById('chat-box');
+        chatBox.scrollTop = chatBox.scrollHeight;
+    </script>
+</body>
+</html>

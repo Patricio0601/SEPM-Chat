@@ -1,0 +1,17 @@
+{
+    "itens_vedados": [
+        "gêneros alimentícios", "alimentos", "azeite", "azeite de oliva", "café", "açúcar", "arroz", "feijão",
+        "carne bovina", "frango", "ovos", "leite", "pão", "macarrão", "batata", "tomate", "cebola", "alho", 
+        "banana", "laranja", "maçã", "manga", "mamão", "melancia", "abacaxi", "goiaba", "cenoura", "alface", 
+        "repolho", "brócolis", "couve", "mandioca", "milho", "farinha de mandioca", "farinha de trigo", "sal", 
+        "óleo de soja", "margarina", "manteiga", "queijo", "iogurte", "chá", "suco de laranja", "refrigerante", 
+        "cerveja", "peixe", "camarão", "bacon", "linguiça", "salsicha", "presunto", "chocolate", "biscoito", "pipoca",
+        "mel", "geleia", "amendoim", "castanha", "nozes", "avelã", "amêndoa", "leite em pó", "leite condensado", 
+        "creme de leite", "achocolatado", "biscoito salgado", "torrada", "molho de tomate", "ketchup", "mostarda", 
+        "maionese", "vinagre", "azeitona", "palmito", "ervilha", "milho enlatado", "sardinha enlatada", "atum enlatado", 
+        "caldo de galinha", "tempero pronto", "sopa instantânea",
+        "combustíveis", "gasolina", "diesel",
+        "peças veiculares", "pneus", "baterias", "material de limpeza",
+        "serviços de limpeza", "limpeza terceirizada"
+    ]
+}
