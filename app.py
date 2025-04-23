@@ -12,6 +12,7 @@ from PIL import Image  # Adicionado para OCR
 import pytesseract     # Adicionado para OCR
 from unidecode import unidecode
 from threading import Lock  # Adicionado para sincronização
+from threading import Lock  # Adicionado para sincronização
 
 app = Flask(__name__)
 
@@ -101,7 +102,14 @@ def salvar_historico(chat_history):
 # Função para limpar arquivos antigos
 def cleanup_old_files(age_hours=24):
     now = time.time()
-    directory = "app_DF"
+    # Caminho relativo
+    directory = os.path.join(os.getcwd(), "app_DF")  # Usa o diretório atual de execução
+
+    # Verifique se o diretório existe
+    if not os.path.isdir(directory):
+        print(f"O diretório {directory} não existe!")
+        return  # Sai da função se o diretório não existir
+
     for filename in os.listdir(directory):
         if filename.startswith("licitacoes_") and filename.endswith(".json"):
             filepath = os.path.join(directory, filename)
@@ -429,6 +437,7 @@ def chat():
 def relatorio():
     relatorio = gerar_relatorio_diario()
     return jsonify({'relatorio': relatorio})
+from waitress import serve
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    serve(app, host="0.0.0.0", port=8000)
