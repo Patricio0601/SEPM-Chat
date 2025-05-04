@@ -1,0 +1,17 @@
+{
+    "itens_almoxarifado": [
+        "papel", "papel sulfite A4", "papel sulfite A3", "papel cartão", "papel almaço",
+        "caneta", "caneta esferográfica", "caneta hidrográfica", "caneta permanente",
+        "lápis", "lápis preto", "lápis de cor", "lápis grafite",
+        "borracha", "apontador", "régua", "compasso", "transferidor",
+        "tesoura", "cola", "cola branca", "cola em bastão",
+        "clipe", "grampeador", "grampo", "fita adesiva", "fita crepe",
+        "caderno", "caderno universitário", "caderno brochura", "bloco de notas",
+        "envelope", "pasta", "pasta com elástico", "pasta suspensa",
+        "marca-texto", "corretivo", "carimbo", "tinta para carimbo",
+        "impressora", "toner", "cartucho de tinta", "papel para impressora",
+        "calculadora", "agenda", "organizer", "etiqueta adesiva",
+        "perfuratriz", "desentupidor de grampeador", "pino de grampeador",
+        "folha de papel almaço", "folha de papel ofício"
+    ]
+}
